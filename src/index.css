@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.form-input {
+  @apply rounded-xl my-2 h-8 px-4 border-gray-600 border
+}

@@ -2,6 +2,8 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import Home from '@/pages/Home';
 import NotFound from '@/pages/NotFound';
 import Layout from '@/components/Layout';
+import Checkout from '@/pages/Checkout';
+import Information from '@/pages/Information';
 
 export function App() {
   return (
@@ -9,6 +11,8 @@ export function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/checkout/information" element={<Information />} />
       </Routes>
     </div>
   );

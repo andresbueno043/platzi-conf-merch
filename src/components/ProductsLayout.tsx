@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductCard from '@/components/ProductCard';
 
 type Props = {
   products: Product[];
@@ -6,9 +7,11 @@ type Props = {
 
 function ProductsLayout({ products }: Props) {
   return (
-    <div className="w-full flex">
+    <div className="w-full flex my-10">
       <div className="w-[80%] mx-auto grid grid-cols-4 gap-12 grid-flow-row">
-        <div className="col-span-1 h-60 w-full bg-black" />
+        {products.map((product) => (
+          <ProductCard product={product} key={product.id} />
+        ))}
       </div>
     </div>
   );
